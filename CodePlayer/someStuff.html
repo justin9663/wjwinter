@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+
+</head>
+
+<body>
+ <div id="something">Blah</div>
+ 
+ <script>
+ 	$("#something").click(function() {
+		$("div").animate({height: "200px", width: "200px", opacity: "0.4"}, "slow");
+	});
+ </script>
+</body>
+</html>

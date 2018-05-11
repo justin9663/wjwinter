@@ -1,0 +1,38 @@
+﻿
+<!doctype html>
+<html>
+<head>
+
+    <title>JavaScript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <style type="text/css">
+        #circle{background-color:red; width:300px; height: 300px; border-radius:150px;}
+
+    </style>
+</head>
+<body>
+    <p id="arrayString"></p>
+    <input id="answer" placeholder="answer: 1-5" />
+    <button id="submit">Submit</button>
+
+    
+
+    <script>
+
+        var arrayString = "";
+
+        var myArray = ["pizza", "sushi", "fries", "turkey"];
+
+        for (var i = 0; i < myArray.length; i++) {
+            arrayString = arrayString + myArray[i] + " ";
+
+            document.getElementById("arrayString").innerHTML = arrayString;
+        }
+
+    </script>
+
+</body>
+</html>

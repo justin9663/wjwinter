@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Learning jQuery</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+</head>
+<body>
+    <div id="greenBox01"></div>
+    <div id="redBox01"></div>
+    <div id="redBox02"></div>
+    <p id="hideText">Hide this text!</p>
+    <button type="button" id="hide">Click me!</button>
+    <button type="button" id="show">Come on back!</button>
+
+
+    <script type="text/javascript" src="scripts/jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+        $("#greenBox01").click(function() {
+			$("#redBox02").css("width", "500px");
+		});
+		
+		$("#greenBox01").click(function() {
+			$(this).animate({width:"300px", 
+							 height:"300px", 
+							 borderRadius:"150px",
+							 marginLeft: "100px",
+							 marginTop: "300px"}, 
+							 800);
+		});
+		
+		$("#greenBox01").click(function() {
+			$("#redBox01").fadeOut();
+		});
+		$("#hide").click(function() {
+			$("#hideText").fadeOut(200, function() {
+				alert("Text has faded out");
+			});
+		});
+		$("#show").click(function() {
+			$("#hideText").fadeIn();
+		});
+    </script>
+</body>
+</html>

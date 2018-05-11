@@ -1,0 +1,61 @@
+/* CSS Document */
+
+html, body{
+	width: 100%;
+	
+}
+
+#topContainer{
+	background-image:url(../images/smap-weather.jpg);
+	width:100%;
+	height: 100%;
+	background-size:cover;
+	background-position:center;	
+	margin-top: 50px;
+	padding-top: 100px;
+}
+
+.contentContainer{	
+	
+}
+
+.jumboTransparency{
+	background-color: rgba(22,22,22,0.30);
+	text-align: center;
+	color:#ffffff;
+	margin-top: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.jumboTransparency p, .jumboTransparency button{
+	margin-top: 25px;
+}
+
+#needCity, #noCityFound{
+	display:none;
+}
+#cityForecast{
+	display:none;
+	margin-top: 30px;
+}
+
+.alert{
+	font-size: 18px;
+}
+@media (min-width: 768px) and (max-width: 991px){
+	#searchArea{
+		height: 100px;
+	}
+	.alert{
+		font-size: 30px;
+	}
+	.jumboTransparency{
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+	#findWeather{
+		padding: 50px;
+		font-size: 30px;
+	}
+	
+}

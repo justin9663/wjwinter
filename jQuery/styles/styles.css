@@ -1,0 +1,31 @@
+﻿body
+{
+}
+
+#redBox01{
+    height:200px;
+    width: 200px;
+    background-color: #ff0000;
+    margin: 20px;
+}
+
+#redBox02{
+    height:200px;
+    width: 200px;
+    background-color: #ff0000;
+    margin: 20px;
+}
+
+#greenBox01{
+    height:200px;
+    width: 200px;
+    background-color: #00ff21;
+    border-radius: 100px;
+    margin: 20px;
+}
+#hideText{
+	display:block;
+}
+#hide{
+	
+}

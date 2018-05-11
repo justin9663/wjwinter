@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+</head>
+<body>
+    <h1>This and that</h1>
+    <button type="button" id="hide">Hide text</button><p>this is some other text</p>
+
+
+    <script type="text/javascript" src="scripts/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script>
+		/*$.get("test.html", function(data) {
+			alert(data);	
+		});*/
+		$.ajax({
+			url:"test.html"
+		}).done(function(data){
+			
+			$("h1").append(data);
+			
+		});
+	</script>
+</body>
+</html>

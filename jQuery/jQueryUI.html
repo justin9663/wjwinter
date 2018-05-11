@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Learning jQuerUI</title>
+    <style>
+
+        #box{
+            background-color:lightgreen;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+        }
+        #box p{
+            font-family: Arial;
+            padding-top: 90px;
+        }
+        #resizable{
+            background-color:lightgreen;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+        }
+        #target {height:500px; width: 500px; background-color:azure;}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" />
+    <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="box"><p>Drag me around</p></div>
+    <div id="resizable"><p>Resize me!</p></div>
+    <div id="target">Drop on here:</div>
+    <div id="accordian">
+        <h3>This is a title!</h3>
+        <div><p>this is a whole lot of text normally............</p></div>
+        <h3>This is a title!</h3>
+        <div><p>this is a whole lot of text normally............</p></div>
+        <h3>This is a title!</h3>
+        <div><p>this is a whole lot of text normally............</p></div>
+        <h3>This is a title!</h3>
+        <div><p>this is a whole lot of text normally............</p></div>
+        <h3>This is a title!</h3>
+        <div><p>this is a whole lot of text normally............</p></div>
+    </div>
+    <ul id="sortable">
+        <li>Sushi</li>
+        <li>Mexican</li>
+        <li>Pho</li>
+        <li>Steak!</li>
+    </ul>
+    <script type="text/javascript">
+        $(function () {
+            $("#box").draggable({
+                drag: function (event, ui) {
+                    $("#target").css("background-color", "purple")
+                }
+            });
+            $("#resizable").resizable();
+            $("#target").droppable({
+                drop: function (ui, event) {
+                    $("#target").css("background-color", "green");
+                    alert("dropped");
+                }
+            });
+            $("#accordian").accordion();
+            $("#sortable").sortable();
+        });
+    </script>
+</body>
+</html>

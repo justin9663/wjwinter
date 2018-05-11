@@ -1,0 +1,59 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <style type="text/css">
+        #circle{background-color:red; width:300px; height: 300px; border-radius:150px;}
+
+    </style>
+</head>
+<body>
+    <input id="myInput" type="text" value="test" />
+
+    <button id="styleChanger">Change the text</button>
+
+    <button id="addToArray">Add something to an array</button>
+
+    <div id="firstDiv">This is some text.</div>
+
+    <div id="circle"></div>
+
+    
+
+    <script>
+        var newText = document.getElementById("myInput").value;
+        var updateText;
+        var input = "myInput";
+        var circleDis = "circle";
+        var myArray = ["pizza", "sushi", "tacos"];
+
+        var styleChanger = document.getElementById("styleChanger");
+
+        var addToArray = document.getElementById("addToArray");
+
+        addToArray.onclick = function () {
+            console.log(myArray);
+            myArray.push(newText);
+            console.log(myArray);
+            newText = document.getElementById("myInput").value;
+            document.getElementById("firstDiv").innerHTML = newText;
+        };
+
+        
+
+        styleChanger.onclick = function ()
+        {
+            newText = document.getElementById("myInput").value;
+            document.getElementById("firstDiv").innerHTML = myArray[0];
+        }
+        document.getElementById(circleDis).onclick = function () { document.getElementById("circle").style.display = "none";}
+
+    </script>
+
+</body>
+</html>
